@@ -6,14 +6,19 @@ reference (60 automated + 40 code quality = 100).
 
 ## Automated checks (60 pts, scored from the tests - not by hand)
 
-| Check | Points |
+The automated 60 is proportional to the share of the suite that passes. The suite
+is 16 tests, so each test is worth 3.75 points. Here is what it covers:
+
+| Check | Tests |
 | --- | --- |
-| `GET /health` and `GET /sightings` (from the DB) | 0 |
-| `GET /sightings/:id` (200 found / 404 missing) | 0 |
-| `POST /sightings` (201 created + persisted / 400 invalid) | 0 |
-| `PATCH /sightings/:id` (200 updated / 404 missing) | 0 |
-| `DELETE /sightings/:id` (204 / 404 missing) | 0 |
-| **Automated subtotal** (proportional to tests passed) | **60** |
+| `GET /health` returns 200 and `{ status: "ok" }` | 1 |
+| `GET /sightings` returns the rows from the database | 1 |
+| `GET /sightings/:id` (200 found / 404 missing) | 2 |
+| `POST /sightings` (201 created + persisted / 400 invalid) | 2 |
+| `PATCH /sightings/:id` (200 updated / 404 missing) | 2 |
+| `DELETE /sightings/:id` (204 / 404 missing) | 2 |
+| `student.json` is filled in (one test per field) | 6 |
+| **Automated subtotal** | **16 tests = 60 pts** |
 
 ## Code-quality rubric (40 pts, scored by the instructor from the source)
 
