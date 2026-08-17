@@ -16,9 +16,9 @@ by a real database, so its data survives a restart. The data layer is provided
 > (the "mapping CRUD to REST routes" section) and, if you need a refresher,
 > [`m4-backend/05`](../m4-backend/05-restful-design-patterns.md).
 
-## 🎓 This activity is graded (100 points)
+## 🎓 This activity is graded (50 points)
 
-**60 automated** (your tests pass) + **40 code quality** (reviewed from your
+**30 automated** (your tests pass) + **20 code quality** (reviewed from your
 source). The code-quality half rewards two things above all: **REST correctness**
 (right verb, right status code) and clean **layering** (routes do HTTP, the repo
 does SQL, and they never mix). Read [`RUBRIC.md`](RUBRIC.md) before you start.
